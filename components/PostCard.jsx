@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import Link from "next/link";
+import Link from "next/Link";
 
 const PostCard = ({ post }) => (
   <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 basis-1/2">
