@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
-import Link from "next/Link";
+import NextLink from "next/link";
 import { getRecentWork } from "../services";
 import { getSimilarWork } from "../services";
 
@@ -41,13 +41,13 @@ const PostWidget = ({ categories, slug }) => {
               <p className="font-xs">
                 {moment(post.createdAt).format("DD/MM/YYYY")}
               </p>
-              <Link
+              <NextLink
                 href={`post/$post.slug`}
                 key={post.title}
                 className="text-md"
               >
                 {post.title}
-              </Link>
+              </NextLink>
             </div>
           </div>
         ))}

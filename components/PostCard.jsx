@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import Link from "next/Link";
+import NextLink from "next/link";
 
 const PostCard = ({ post }) => (
   <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 basis-1/2">
@@ -13,7 +13,7 @@ const PostCard = ({ post }) => (
     </div>
 
     <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
-      <Link href={`/post/${post.slug}`}>{post.title}</Link>
+      <NextLink href={`/post/${post.slug}`}>{post.title}</NextLink>
     </h1>
     <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
       <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 items-center">
@@ -31,11 +31,11 @@ const PostCard = ({ post }) => (
       {post.excerpt}
     </p>
     <div className="text-center">
-      <Link href={`/post/${post.slug}`}>
+      <NextLink href={`/post/${post.slug}`}>
         <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-black text-lg font-medium  text-white px-8 py-3 cursor-pointer">
           Continue Reading
         </span>
-      </Link>
+      </NextLink>
     </div>
   </div>
 );
